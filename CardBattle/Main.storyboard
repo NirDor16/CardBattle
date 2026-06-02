@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" initialViewController="NAV-001">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+
+        <!-- Navigation Controller -->
+        <scene sceneID="scene-nav">
+            <objects>
+                <navigationController id="NAV-001" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV-002">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MVC-001" kind="relationship" relationship="rootViewController" id="SEG-001"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAV-003" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+
+        <!-- Menu View Controller -->
+        <scene sceneID="scene-menu">
+            <objects>
+                <viewController id="MVC-001" customClass="MenuViewController" customModule="CardBattle" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="MenuVC">
+                    <view key="view" contentMode="scaleToFill" id="MVC-002">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-004">
+                                <rect key="frame" x="322" y="30" width="200" height="30"/>
+                                <state key="normal" title="Insert name"/>
+                                <connections>
+                                    <action selector="insertNameTapped:" destination="MVC-001" eventType="touchUpInside" id="AC-M02"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Player" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-005">
+                                <rect key="frame" x="272" y="155" width="300" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="left_earth" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-006">
+                                <rect key="frame" x="0.0" y="85" width="120" height="190"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="West Side" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-007">
+                                <rect key="frame" x="0.0" y="279" width="120" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="right_earth" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-008">
+                                <rect key="frame" x="724" y="85" width="120" height="190"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="East Side" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-009">
+                                <rect key="frame" x="724" y="279" width="120" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="custom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVC-010">
+                                <rect key="frame" x="322" y="330" width="200" height="44"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startTapped:" destination="MVC-001" eventType="touchUpInside" id="AC-M01"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MVC-004" firstAttribute="centerX" secondItem="MVC-002" secondAttribute="centerX" id="CON-M01"/>
+                            <constraint firstItem="MVC-004" firstAttribute="top" secondItem="MVC-002" secondAttribute="top" constant="30" id="CON-M02"/>
+                            <constraint firstItem="MVC-005" firstAttribute="centerX" secondItem="MVC-002" secondAttribute="centerX" id="CON-M03"/>
+                            <constraint firstItem="MVC-005" firstAttribute="centerY" secondItem="MVC-002" secondAttribute="centerY" constant="-20" id="CON-M04"/>
+                            <constraint firstItem="MVC-006" firstAttribute="leading" secondItem="MVC-002" secondAttribute="leading" id="CON-M05"/>
+                            <constraint firstItem="MVC-006" firstAttribute="centerY" secondItem="MVC-002" secondAttribute="centerY" id="CON-M06"/>
+                            <constraint firstItem="MVC-006" firstAttribute="width" constant="120" id="CON-M07"/>
+                            <constraint firstItem="MVC-006" firstAttribute="height" constant="190" id="CON-M08"/>
+                            <constraint firstItem="MVC-007" firstAttribute="centerX" secondItem="MVC-006" secondAttribute="centerX" id="CON-M09"/>
+                            <constraint firstItem="MVC-007" firstAttribute="top" secondItem="MVC-006" secondAttribute="bottom" constant="4" id="CON-M10"/>
+                            <constraint firstItem="MVC-008" firstAttribute="trailing" secondItem="MVC-002" secondAttribute="trailing" id="CON-M11"/>
+                            <constraint firstItem="MVC-008" firstAttribute="centerY" secondItem="MVC-002" secondAttribute="centerY" id="CON-M12"/>
+                            <constraint firstItem="MVC-008" firstAttribute="width" constant="120" id="CON-M13"/>
+                            <constraint firstItem="MVC-008" firstAttribute="height" constant="190" id="CON-M14"/>
+                            <constraint firstItem="MVC-009" firstAttribute="centerX" secondItem="MVC-008" secondAttribute="centerX" id="CON-M15"/>
+                            <constraint firstItem="MVC-009" firstAttribute="top" secondItem="MVC-008" secondAttribute="bottom" constant="4" id="CON-M16"/>
+                            <constraint firstItem="MVC-010" firstAttribute="centerX" secondItem="MVC-002" secondAttribute="centerX" id="CON-M17"/>
+                            <constraint firstItem="MVC-002" firstAttribute="bottom" secondItem="MVC-010" secondAttribute="bottom" constant="30" id="CON-M18"/>
+                            <constraint firstItem="MVC-010" firstAttribute="width" constant="200" id="CON-M19"/>
+                            <constraint firstItem="MVC-010" firstAttribute="height" constant="44" id="CON-M20"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="MVC-005" id="OL-M01"/>
+                        <outlet property="startButton" destination="MVC-010" id="OL-M02"/>
+                        <outlet property="leftEarthImageView" destination="MVC-006" id="OL-M03"/>
+                        <outlet property="rightEarthImageView" destination="MVC-008" id="OL-M04"/>
+                        <outlet property="westSideLabel" destination="MVC-007" id="OL-M05"/>
+                        <outlet property="eastSideLabel" destination="MVC-009" id="OL-M06"/>
+                        <segue destination="GVC-001" kind="show" identifier="showGame" id="SEG-002"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MVC-011" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="0.0"/>
+        </scene>
+
+        <!-- Name Entry View Controller -->
+        <scene sceneID="scene-nameentry">
+            <objects>
+                <viewController id="NVC-001" customClass="NameEntryViewController" customModule="CardBattle" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="NameEntryVC">
+                    <view key="view" contentMode="scaleToFill" id="NVC-002">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVC-004">
+                                <rect key="frame" x="272" y="100" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            </label>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NVC-005">
+                                <rect key="frame" x="272" y="146" width="300" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="custom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVC-006">
+                                <rect key="frame" x="322" y="216" width="200" height="44"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="confirmTapped:" destination="NVC-001" eventType="touchUpInside" id="AC-N01"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NVC-004" firstAttribute="centerX" secondItem="NVC-002" secondAttribute="centerX" id="CON-N01"/>
+                            <constraint firstItem="NVC-004" firstAttribute="centerY" secondItem="NVC-002" secondAttribute="centerY" constant="-60" id="CON-N02"/>
+                            <constraint firstItem="NVC-005" firstAttribute="centerX" secondItem="NVC-002" secondAttribute="centerX" id="CON-N03"/>
+                            <constraint firstItem="NVC-005" firstAttribute="top" secondItem="NVC-004" secondAttribute="bottom" constant="16" id="CON-N04"/>
+                            <constraint firstItem="NVC-005" firstAttribute="width" constant="300" id="CON-N05"/>
+                            <constraint firstItem="NVC-005" firstAttribute="height" constant="40" id="CON-N06"/>
+                            <constraint firstItem="NVC-006" firstAttribute="centerX" secondItem="NVC-002" secondAttribute="centerX" id="CON-N07"/>
+                            <constraint firstItem="NVC-006" firstAttribute="top" secondItem="NVC-005" secondAttribute="bottom" constant="24" id="CON-N08"/>
+                            <constraint firstItem="NVC-006" firstAttribute="width" constant="200" id="CON-N09"/>
+                            <constraint firstItem="NVC-006" firstAttribute="height" constant="44" id="CON-N10"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="NVC-005" id="OL-N01"/>
+                        <outlet property="confirmButton" destination="NVC-006" id="OL-N02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NVC-007" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="700"/>
+        </scene>
+
+        <!-- Game View Controller -->
+        <scene sceneID="scene-game">
+            <objects>
+                <viewController id="GVC-001" customClass="GameViewController" customModule="CardBattle" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="GameVC">
+                    <view key="view" contentMode="scaleToFill" id="GVC-002">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-004">
+                                <rect key="frame" x="20" y="12" width="120" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-005">
+                                <rect key="frame" x="14" y="38" width="80" height="52"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PC" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-006">
+                                <rect key="frame" x="704" y="12" width="120" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-007">
+                                <rect key="frame" x="750" y="38" width="80" height="52"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-008">
+                                <rect key="frame" x="120" y="70" width="170" height="240"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-009">
+                                <rect key="frame" x="397" y="145" width="50" height="50"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-010">
+                                <rect key="frame" x="397" y="200" width="50" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="GVC-011">
+                                <rect key="frame" x="554" y="70" width="170" height="240"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GVC-004" firstAttribute="leading" secondItem="GVC-002" secondAttribute="leading" constant="20" id="CON-G01"/>
+                            <constraint firstItem="GVC-004" firstAttribute="top" secondItem="GVC-002" secondAttribute="top" constant="45" id="CON-G02"/>
+                            <constraint firstItem="GVC-005" firstAttribute="leading" secondItem="GVC-002" secondAttribute="leading" constant="10" id="CON-G03"/>
+                            <constraint firstItem="GVC-005" firstAttribute="top" secondItem="GVC-004" secondAttribute="bottom" constant="2" id="CON-G04"/>
+                            <constraint firstItem="GVC-002" firstAttribute="trailing" secondItem="GVC-006" secondAttribute="trailing" constant="20" id="CON-G05"/>
+                            <constraint firstItem="GVC-006" firstAttribute="top" secondItem="GVC-002" secondAttribute="top" constant="45" id="CON-G06"/>
+                            <constraint firstItem="GVC-006" firstAttribute="width" constant="120" id="CON-G07"/>
+                            <constraint firstItem="GVC-002" firstAttribute="trailing" secondItem="GVC-007" secondAttribute="trailing" constant="10" id="CON-G08"/>
+                            <constraint firstItem="GVC-007" firstAttribute="top" secondItem="GVC-006" secondAttribute="bottom" constant="2" id="CON-G09"/>
+                            <constraint firstItem="GVC-007" firstAttribute="width" constant="80" id="CON-G10"/>
+                            <constraint firstItem="GVC-008" firstAttribute="centerX" secondItem="GVC-002" secondAttribute="centerX" constant="-180" id="CON-G11"/>
+                            <constraint firstItem="GVC-008" firstAttribute="centerY" secondItem="GVC-002" secondAttribute="centerY" id="CON-G12"/>
+                            <constraint firstItem="GVC-008" firstAttribute="width" constant="170" id="CON-G13"/>
+                            <constraint firstItem="GVC-008" firstAttribute="height" constant="240" id="CON-G14"/>
+                            <constraint firstItem="GVC-009" firstAttribute="centerX" secondItem="GVC-002" secondAttribute="centerX" id="CON-G15"/>
+                            <constraint firstItem="GVC-009" firstAttribute="centerY" secondItem="GVC-002" secondAttribute="centerY" constant="-24" id="CON-G16"/>
+                            <constraint firstItem="GVC-009" firstAttribute="width" constant="44" id="CON-G17"/>
+                            <constraint firstItem="GVC-009" firstAttribute="height" constant="44" id="CON-G18"/>
+                            <constraint firstItem="GVC-010" firstAttribute="centerX" secondItem="GVC-002" secondAttribute="centerX" id="CON-G19"/>
+                            <constraint firstItem="GVC-010" firstAttribute="top" secondItem="GVC-009" secondAttribute="bottom" constant="4" id="CON-G20"/>
+                            <constraint firstItem="GVC-011" firstAttribute="centerX" secondItem="GVC-002" secondAttribute="centerX" constant="180" id="CON-G21"/>
+                            <constraint firstItem="GVC-011" firstAttribute="centerY" secondItem="GVC-002" secondAttribute="centerY" id="CON-G22"/>
+                            <constraint firstItem="GVC-011" firstAttribute="width" constant="170" id="CON-G23"/>
+                            <constraint firstItem="GVC-011" firstAttribute="height" constant="240" id="CON-G24"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerNameLabel" destination="GVC-004" id="OL-G01"/>
+                        <outlet property="playerScoreLabel" destination="GVC-005" id="OL-G02"/>
+                        <outlet property="pcNameLabel" destination="GVC-006" id="OL-G03"/>
+                        <outlet property="pcScoreLabel" destination="GVC-007" id="OL-G04"/>
+                        <outlet property="playerCardImageView" destination="GVC-008" id="OL-G05"/>
+                        <outlet property="timerIconImageView" destination="GVC-009" id="OL-G06"/>
+                        <outlet property="timerLabel" destination="GVC-010" id="OL-G07"/>
+                        <outlet property="pcCardImageView" destination="GVC-011" id="OL-G08"/>
+                        <segue destination="SVC-001" kind="show" identifier="showSummary" id="SEG-003"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GVC-012" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2200" y="0.0"/>
+        </scene>
+
+        <!-- Summary View Controller -->
+        <scene sceneID="scene-summary">
+            <objects>
+                <viewController id="SVC-001" customClass="SummaryViewController" customModule="CardBattle" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="SummaryVC">
+                    <view key="view" contentMode="scaleToFill" id="SVC-002">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner: Player" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVC-004">
+                                <rect key="frame" x="200" y="110" width="444" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score: 0" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVC-005">
+                                <rect key="frame" x="200" y="178" width="444" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVC-006">
+                                <rect key="frame" x="322" y="300" width="200" height="44"/>
+                                <state key="normal" title="BACK TO MENU"/>
+                                <connections>
+                                    <action selector="backToMenuTapped:" destination="SVC-001" eventType="touchUpInside" id="AC-S01"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SVC-004" firstAttribute="centerX" secondItem="SVC-002" secondAttribute="centerX" id="CON-S01"/>
+                            <constraint firstItem="SVC-004" firstAttribute="centerY" secondItem="SVC-002" secondAttribute="centerY" constant="-50" id="CON-S02"/>
+                            <constraint firstItem="SVC-005" firstAttribute="centerX" secondItem="SVC-002" secondAttribute="centerX" id="CON-S03"/>
+                            <constraint firstItem="SVC-005" firstAttribute="top" secondItem="SVC-004" secondAttribute="bottom" constant="18" id="CON-S04"/>
+                            <constraint firstItem="SVC-006" firstAttribute="centerX" secondItem="SVC-002" secondAttribute="centerX" id="CON-S05"/>
+                            <constraint firstItem="SVC-002" firstAttribute="bottom" secondItem="SVC-006" secondAttribute="bottom" constant="30" id="CON-S06"/>
+                            <constraint firstItem="SVC-006" firstAttribute="width" constant="200" id="CON-S07"/>
+                            <constraint firstItem="SVC-006" firstAttribute="height" constant="44" id="CON-S08"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="winnerLabel" destination="SVC-004" id="OL-S01"/>
+                        <outlet property="scoreLabel" destination="SVC-005" id="OL-S02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVC-007" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3400" y="0.0"/>
+        </scene>
+
+    </scenes>
+    <resources>
+        <image name="left_earth" width="256" height="512"/>
+        <image name="right_earth" width="256" height="512"/>
+    </resources>
+</document>
